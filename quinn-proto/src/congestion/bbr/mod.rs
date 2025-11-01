@@ -492,6 +492,7 @@ impl Controller for Bbr {
             congestion_window: self.window(),
             ssthresh: None,
             pacing_rate: Some(self.pacing_rate * 8),
+            bandwidth: Some(self.max_bandwidth.get_estimate())
         }
     }
 

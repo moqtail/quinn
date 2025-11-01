@@ -155,6 +155,8 @@ pub struct PathStats {
     pub black_holes_detected: u64,
     /// Largest UDP payload size the path currently supports
     pub current_mtu: u16,
+    /// Bandwidth estimate
+    pub bandwidth: Option<u64>,
 }
 
 /// Connection statistics
