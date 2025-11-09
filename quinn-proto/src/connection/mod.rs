@@ -1270,7 +1270,7 @@ impl Connection {
         stats.path.rtt = self.path.rtt.get();
         stats.path.cwnd = self.path.congestion.window();
         stats.path.current_mtu = self.path.mtud.current_mtu();
-        stats.path.bandwidth = self.path.congestion.metrics().bandwidth;
+        stats.path.bandwidth = self.path.congestion.metrics().pacing_rate;
         stats
     }
 
